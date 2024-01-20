@@ -45,10 +45,9 @@ Variables
   --clr-secondary: hsla(182, 63%, 54%);
   --clr-black: #222;
   --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
+  --ff-secondary: "Helvetica", sans-serif;
   --transition: all 0.3s linear;
-  --spacing: 0.25rem;
-  --radius: 0.5rem;
+  --radius: 0.2rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
@@ -224,7 +223,7 @@ nav {
 }
 .nav-toggle {
   font-size: 1.5rem;
-  color: var(--clr-grey-1);
+  color: white;
   background: transparent;
   border-color: transparent;
   transition: var(--transition);
@@ -288,7 +287,6 @@ nav {
     color: var(--clr-white);
     font-size: 1.1rem;
     text-transform: capitalize;
-    letter-spacing: var(--spacing);
     display: block;
     transition: var(--transition);
     margin: 0 1rem;
@@ -359,7 +357,7 @@ footer p {
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background: var(--clr-secondary);
+  background: darkgrey;
   width: 2rem;
   height: 2rem;
   display: grid;
