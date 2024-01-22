@@ -42,7 +42,7 @@ Variables
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
-  --clr-secondary: hsla(182, 63%, 54%);
+  --clr-secondary: rgb(142, 142, 143);
   --clr-black: #222;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Helvetica", sans-serif;
@@ -69,7 +69,7 @@ html {
   box-sizing: border-box;
 }
 body {
-  font-family: var(--ff-secondary);
+  font-family: var(--ff-primary);
   background: var(--clr-grey-10);
   color: var(--clr-grey-1);
   line-height: 1.5;
@@ -216,7 +216,7 @@ nav {
   height: auto !important;
 } */
 .nav-header {
-    background-color: rgb(0, 77, 68);
+  background-color: rgb(0, 77, 68);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -300,7 +300,7 @@ nav {
 /* hero */
 header {
   min-height: 100vh;
-  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+  background: linear-gradient(rgb(0, 77, 68), rgba(225, 136, 62, 0.966)),
     url(./hero-bcg.jpeg) center/cover no-repeat;
 }
 .banner {
@@ -332,10 +332,27 @@ header {
 .title span {
   color: var(--clr-secondary);
 }
-#about,
-#services,
-#tours {
+#about .title {
   height: 80vh;
+  background-size: cover;
+  background-position: center;
+  color: white; 
+  text-align: center;
+  padding: 100px;
+}
+
+#about .title h2 {
+  margin-bottom: 0; /* Remove default margin for better alignment */
+}
+
+#about .title span {
+  display: block; /* Separate span to a new line */
+}
+
+#services,
+#contact {
+  height: 80vh;
+  text-align: center;
 }
 #services {
   background: var(--clr-white);
@@ -364,7 +381,7 @@ footer p {
   place-items: center;
   border-radius: var(--radius);
   color: var(--clr-white);
-  animation: bounce 2s ease-in-out infinite;
+  animation: bounce 3s ease-in-out infinite;
   visibility: hidden;
   z-index: -100;
 }
@@ -378,9 +395,13 @@ footer p {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
   100% {
     transform: scale(1);
   }
+}
+
+.top-link:hover {
+  background: rgb(142, 142, 143); /* Change this to the slightly darker color you prefer */
 }
