@@ -31,7 +31,7 @@ Variables
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
   /* dark color for background */
-  --clr-bground: rgba(0, 0, 0, 0.7);
+  --clr-bground: rgba(107, 175, 80, 0.7);
     /* grey used for paragraphs */
   --clr-grey-5: hsl(210, 22%, 49%);
   --clr-grey-6: hsl(209, 23%, 60%);
@@ -95,7 +95,7 @@ h2,
 h3,
 h4 {
   letter-spacing: var(--spacing);
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   line-height: 1.25;
   margin-bottom: 0.75rem;
   font-family: var(--ff-primary);
@@ -232,7 +232,7 @@ nav {
   cursor: pointer;
 }
 .nav-toggle:hover {
-  color: white;
+  color: var(--clr-white);
 }
 .logo {
   height: 50px;
@@ -257,10 +257,10 @@ nav {
   padding: 0.75rem 0;
 }
 .links a:hover {
-  color: var(--clr-grey-1);
+  color: var(--clr-white);
 }
 @media screen and (min-width: 800px) {
-  nav {
+  .nav {
     background: transparent;
   }
   .nav-center {
@@ -306,7 +306,7 @@ header {
     
 }
 .banner {
-  background: url(./hero-bcg.jpg) center/cover no-repeat;
+  background: url(./Passport-Example.jpg) center/cover no-repeat;
   min-height: 100vh;
   display: grid;
   place-items: center;
@@ -329,15 +329,19 @@ header {
 }
 /* sections and title */
 
-.section{
-  background: url(./hero-bcg.jpg) center/cover no-repeat;
-}
-.title h2 {
+
+.title h2,h3 {
+  color: var(--clr-primary-1);
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .title span {
   color: var(--clr-secondary);
+}
+
+#about {
+  background: url(./shopfront.jpg) center/cover no-repeat;
+
 }
 #about .title {
   height: 100vh;
@@ -359,16 +363,18 @@ display: block; /* Separate span to a new line */
   background-color: var(--clr-bground);
   border-radius: 8px; 
   padding: 10px; 
-  /* box-sizing: border-box;  */
+  box-sizing: border-box; 
 }
 
-#services,
-#contact {
-  height: 80vh;
-  text-align: center;
-}
 #services {
-  background: var(--clr-white);
+  background: var(--clr-bground);
+  height: 100vh;
+}
+
+#contact {
+  background: url(./shopfront.jpg) center/cover no-repeat;
+  height: 100vh;
+  text-align: center;
 }
 footer {
   background: rgb(0, 77, 68);
@@ -378,7 +384,6 @@ footer p {
   color: var(--clr-white);
   text-align: center;
   text-transform: capitalize;
-  letter-spacing: var(--spacing);
   margin-bottom: 0;
 }
 
@@ -387,7 +392,7 @@ footer p {
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background: darkgrey;
+  background: var(--clr-grey-5);
   width: 2rem;
   height: 2rem;
   display: grid;
