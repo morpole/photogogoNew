@@ -82,3 +82,23 @@ scrollLinks.forEach((link) => {
   });
 });
 // calculate heights
+
+//questions######
+
+const questions = document.querySelectorAll('.question');
+// console.log(questions)
+
+questions.forEach(function(orange){
+    // console.log(orange);
+    const btn = orange.querySelector('.question-btn');
+    // console.log(btn);
+    btn.addEventListener('click', function() {
+
+        questions.forEach(function(bananas){
+            if(bananas !== orange){
+                bananas.classList.remove('show-text')
+            }
+        });
+        orange.classList.toggle('show-text');
+    })
+});
