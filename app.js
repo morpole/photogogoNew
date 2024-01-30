@@ -1,7 +1,4 @@
-// Element.getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
-// pageYOffset is a read - only window property that returns the number of pixels the document has been scrolled vertically.
-// slice extracts a section of a string without modifying original string
-//offsetTop - A Number, representing the top position of the element, in pixels
+
 
 // ********** set date ************
 // select span
@@ -42,8 +39,6 @@ window.addEventListener("scroll", function () {
   // setup back to top link
 
   if (scrollHeight > 500) {
-    console.log("helo");
-
     topLink.classList.add("show-link");
   } else {
     topLink.classList.remove("show-link");
@@ -81,24 +76,68 @@ scrollLinks.forEach((link) => {
     linksContainer.style.height = 0;
   });
 });
-// calculate heights
 
-//questions######
 
-const questions = document.querySelectorAll('.question');
-// console.log(questions)
 
-questions.forEach(function(orange){
-    // console.log(orange);
-    const btn = orange.querySelector('.question-btn');
-    // console.log(btn);
-    btn.addEventListener('click', function() {
+// Define an array of question objects
+const questionsData = [
+  {
+    title: "EU/Irish prints & digital",
+    text: "Set of 6 35x45mm prints and pre-checked digital image sent to your email.",
+    image: "./photos/adultTemplate.jpg"
+  },
+  {
+    title: "Canada Passport & Visa Photos",
+    text: "Set of 5x7cm prints & Digital file sent to your email.",
+    image: "./photos/canadaTemplate.png"
+  },
+  {
+    title: "China Passport/Visa Photos",
+    text: "Set of China passport photos & Digital Image sent to your email.",
+    image: "./photos/chinaTemplate.jpg"
+  },
+  {
+    title: "Baby Passport/Visa Photos",
+    text: "Set of Baby passport photos & Digital Image sent to your email.",
+    image: "./photos/babyTemplate.jpg"
+  },
+];
 
-        questions.forEach(function(bananas){
-            if(bananas !== orange){
-                bananas.classList.remove('show-text')
-            }
-        });
-        orange.classList.toggle('show-text');
-    })
+// Get the questions container
+const questionsContainer = document.querySelector('.questions');
+
+// Dynamically generate HTML for questions
+questionsData.forEach(question => {
+  const questionHTML = `
+    <article class="question">
+      <div class="question-title">
+        <p>${question.title}</p>
+        <button type="button" class="question-btn">
+          <span class="plus-icon">
+            <i class="far fa-plus-square"></i>
+          </span>
+          <span class="minus-icon">
+            <i class="far fa-minus-square"></i>
+          </span>
+        </button>
+      </div>
+      <div class="question-text">
+        <p>${question.text}</p>
+        <img src="${question.image}" alt="${question.title}" width="100%" height="100%">
+      </div>
+    </article>
+  `;
+
+  // Append the question HTML to the questions container
+  questionsContainer.innerHTML += questionHTML;
+});
+
+// Attach event listeners to the dynamically generated buttons
+const questionButtons = document.querySelectorAll('.question-btn');
+
+questionButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const question = button.closest('.question');
+    question.classList.toggle('show-text');
+  });
 });
