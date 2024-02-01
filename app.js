@@ -82,23 +82,43 @@ scrollLinks.forEach((link) => {
 // Define an array of question objects
 const questionsData = [
   {
-    title: "EU/Irish prints & digital",
+    title: "EU/irish prints & digital",
     text: "Set of 6 35x45mm prints and pre-checked digital image sent to your email.",
     image: "./photos/adultTemplate.jpg"
   },
   {
-    title: "Canada Passport & Visa Photos",
-    text: "Set of 5x7cm prints & Digital file sent to your email.",
+    title: "US passport/visa photos",
+    text: "Set of 2x2 passport photos & digital image sent to your email.",
+    image: "./photos/babyTemplate.jpg"
+  },
+  {
+    title: "canada passport & visa photos",
+    text: "Set of 5x7cm prints & digital image sent to your email.",
     image: "./photos/canadaTemplate.png"
   },
   {
-    title: "China Passport/Visa Photos",
-    text: "Set of China passport photos & Digital Image sent to your email.",
+    title: "china passport/visa photos",
+    text: "Set of China passport photos & digital image sent to your email.",
     image: "./photos/chinaTemplate.jpg"
   },
   {
-    title: "Baby Passport/Visa Photos",
-    text: "Set of Baby passport photos & Digital Image sent to your email.",
+    title: "schengen visa photos",
+    text: "Set of Schengen visa photos & digital image sent to your email.",
+    image: "./photos/chinaTemplate.jpg"
+  },
+  {
+    title: "baby passport/visa photos",
+    text: "Set of baby passport photos & digital image sent to your email.",
+    image: "./photos/babyTemplate.jpg"
+  },
+  {
+    title: "india passport/visa photos",
+    text: "Set of 2x2 passport photos & digital image sent to your email.",
+    image: "./photos/babyTemplate.jpg"
+  },
+  {
+    title: "critical skills visa photos",
+    text: "Set of Ireland critical skills photos & digital image sent to your email.",
     image: "./photos/babyTemplate.jpg"
   },
 ];

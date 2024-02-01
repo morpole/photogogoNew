@@ -172,7 +172,7 @@ p {
 }
 /* section */
 .section {
-  padding-bottom: 5rem;
+  /* padding-bottom: 5rem; */
 }
 
 .section-center {
@@ -315,7 +315,7 @@ header {
 }
 .container h1 {
   color: var(--clr-white);
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .container p {
   background-color: var(--clr-bground);
@@ -342,7 +342,7 @@ header {
 
 #about {
  height: 100vh;
-  background: url(./photos/shopfront.jpg) center/cover no-repeat;
+  background: url(./photos/map.jpg) center/cover no-repeat;
 
 }
 #about .title {
@@ -376,12 +376,12 @@ display: block; /* Separate span to a new line */
   /* padding-top: 1rem; 
   padding-bottom: 1rem; */
 }
-#title1 {
+/* #title1 {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  max-width: 80%;
-}
+  max-width: 90%;
+} */
 
 /* #services .section-center{
   padding-top: 10%;
@@ -406,7 +406,7 @@ display: block; /* Separate span to a new line */
   box-shadow: var(--light-shadow);
   padding: 1.5rem 1.5rem 0 1.5rem;
   /* margin-bottom: 1rem; */
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--clr-bground2);
   background-color: rgb(251, 253, 253);
 }
 
@@ -415,16 +415,17 @@ display: block; /* Separate span to a new line */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-transform: capitalize;
   padding-bottom: 1rem;
   color: var(--clr--white);
 }
 .question-title p {
   margin-bottom: 0;
-  color: var(--clr-grey-1);
+  color: var(--clr-grey-2);
   font-family: var(--ff-primary);
   font-weight: bold;
   font-size: 1.2rem;
+  /* font-style: italic; */
+  transform: skewX(-5deg);
   text-transform: capitalize;
 }
 .question-btn {
@@ -432,8 +433,8 @@ display: block; /* Separate span to a new line */
   background: transparent;
   border-color: transparent;
   cursor: pointer;
-  color: var(--clr-gold);
-  transition: var(--transition);
+  color: var(--clr-grey-2);
+  /* transition: var(--transition); */
 }
 .question-btn:hover {
   transform: rotate(90deg);
@@ -444,8 +445,10 @@ display: block; /* Separate span to a new line */
   font-family: var(--ff-primary);
 }
 .question-text p {
+  color: var(--clr-grey-2);
+  font-weight: bold;
   margin-bottom: 0;
-  color: var(--clr-black);
+  /* text-transform: capitalize; */
 }
 /*hide text*/
 .question-text {
@@ -473,7 +476,7 @@ display: block; /* Separate span to a new line */
 }
 footer {
   background: rgb(0, 77, 68);
-  padding: 5rem 1rem;
+  padding: 5rem;
 }
 footer p {
   color: var(--clr-white);
@@ -518,3 +521,4 @@ footer p {
 .top-link:hover {
   background: rgb(142, 142, 143);
 }
+
