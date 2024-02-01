@@ -197,8 +197,10 @@ Scroll
 */
 /* navbar */
 nav {
-  background: rgb(0, 77, 68);
+  background: var(--clr-bground2);
   padding: 1rem 1.5rem;
+  z-index: 1000;
+  border-bottom: .5rem solid var(--clr-green-light);
 }
 /* fixed nav */
 .fixed-nav {
