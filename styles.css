@@ -481,10 +481,14 @@ footer {
   padding: 5rem;
 }
 footer p {
-  color: var(--clr-white);
+  color: var(--clr-grey-8);
   text-align: center;
   text-transform: capitalize;
   margin-bottom: 0;
+}
+
+footer.section p .fa-brands.fa-github  {
+  color: #067ef7; /* Specify your desired color here */
 }
 
 .top-link {

@@ -84,12 +84,12 @@ const questionsData = [
   {
     title: "EU/irish prints & digital",
     text: "Set of 6 35x45mm prints and pre-checked digital image sent to your email.",
-    image: "./photos/adultTemplate.jpg"
+    image: "./photos/irishTemplate.jpg"
   },
   {
     title: "US passport/visa photos",
     text: "Set of 2x2 passport photos & digital image sent to your email.",
-    image: "./photos/babyTemplate.jpg"
+    image: "./photos/usaTemplate.jpg"
   },
   {
     title: "canada passport & visa photos",
@@ -104,7 +104,7 @@ const questionsData = [
   {
     title: "schengen visa photos",
     text: "Set of Schengen visa photos & digital image sent to your email.",
-    image: "./photos/chinaTemplate.jpg"
+    image: "./photos/adultTemplate.jpg"
   },
   {
     title: "baby passport/visa photos",
@@ -114,7 +114,7 @@ const questionsData = [
   {
     title: "india passport/visa photos",
     text: "Set of 2x2 passport photos & digital image sent to your email.",
-    image: "./photos/babyTemplate.jpg"
+    image: "./photos/indiaTemplate.jpg"
   },
   {
     title: "critical skills visa photos",
