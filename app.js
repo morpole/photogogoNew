@@ -82,44 +82,59 @@ scrollLinks.forEach((link) => {
 // Define an array of question objects
 const questionsData = [
   {
-    title: "EU/irish prints & digital",
+    title: "EU/irish passport/visa",
     text: "Set of 6 35x45mm prints and pre-checked digital image sent to your email.",
     image: "./photos/irishTemplate.jpg"
   },
   {
-    title: "US passport/visa photos",
+    title: "US passport/visa",
     text: "Set of 2x2 passport photos & digital image sent to your email.",
     image: "./photos/usaTemplate.jpg"
   },
   {
-    title: "canada passport & visa photos",
-    text: "Set of 5x7cm prints & digital image sent to your email.",
-    image: "./photos/canadaTemplate.png"
-  },
-  {
-    title: "china passport/visa photos",
+    title: "china passport/visa",
     text: "Set of China passport photos & digital image sent to your email.",
     image: "./photos/chinaTemplate.jpg"
   },
   {
-    title: "schengen visa photos",
-    text: "Set of Schengen visa photos & digital image sent to your email.",
-    image: "./photos/adultTemplate.jpg"
+    title: "canada passport/visa",
+    text: "Set of 5x7cm prints & digital image sent to your email.",
+    image: "./photos/canadaTemplate.jpg"
   },
   {
-    title: "baby passport/visa photos",
-    text: "Set of baby passport photos & digital image sent to your email.",
-    image: "./photos/babyTemplate.jpg"
-  },
-  {
-    title: "india passport/visa photos",
+    title: "india passport/visa",
     text: "Set of 2x2 passport photos & digital image sent to your email.",
     image: "./photos/indiaTemplate.jpg"
   },
   {
-    title: "critical skills visa photos",
-    text: "Set of Ireland critical skills photos & digital image sent to your email.",
+    title: "schengen visa",
+    text: "Set of Schengen visa photos & digital image sent to your email.",
+    image: "./photos/schengenTemplate.jpg"
+  },
+  {
+    title: "baby passport/visa",
+    text: "Set of baby passport photos & digital image sent to your email.",
     image: "./photos/babyTemplate.jpg"
+  },
+  {
+    title: "irish critical skills visa",
+    text: "Set of Ireland critical skills photos & digital image sent to your email.",
+    image: "./photos/criticalSkillsTemplate.jpg"
+  },
+  {
+    title: "irish citizenship",
+    text: "Set of Irish citizenship photos & digital images sent to your email.",
+    image: "./photos/irishCitizenshipTemplate.jpg"
+  },
+  {
+    title: "safe pass",
+    text: "Set of Ireland citizenship photos & digital image sent to your email.",
+    image: "./photos/criticalSkillsTemplate.jpg"
+  },
+  {
+    title: "taxi PSV licence",
+    text: "Set of Ireland critical skills photos & digital image sent to your email.",
+    image: "./photos/criticalSkillsTemplate.jpg"
   },
 ];
 

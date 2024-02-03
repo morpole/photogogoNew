@@ -309,7 +309,7 @@ header {
     
 }
 .banner {
-  background: url(./photos/Banner2.jpg) center/cover no-repeat;
+  background: url(./photos/banner.jpg) center/cover no-repeat;
   min-height: 100vh;
   display: grid;
   place-items: center;
