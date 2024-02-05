@@ -98,12 +98,12 @@ const questionsData = [
   },
   {
     title: "canada passport/visa",
-    text: "Set of 5x7cm prints & digital image sent to your email.",
+    text: "Set of 5x7cm or 35x45mm prints & digital image sent to your email.",
     image: "./photos/canadaTemplate.jpg"
   },
   {
     title: "india passport/visa",
-    text: "Set of 2x2 passport photos & digital image sent to your email.",
+    text: "Set of 2x2 inch (50x50mm) passport photos & digital image sent to your email.",
     image: "./photos/indiaTemplate.jpg"
   },
   {
@@ -128,13 +128,13 @@ const questionsData = [
   },
   {
     title: "safe pass",
-    text: "Set of Ireland citizenship photos & digital image sent to your email.",
-    image: "./photos/criticalSkillsTemplate.jpg"
+    text: "Set of Irish safe pass photos.",
+    image: "./photos/safePassTemplate.jpg"
   },
   {
     title: "taxi PSV licence",
-    text: "Set of Ireland critical skills photos & digital image sent to your email.",
-    image: "./photos/criticalSkillsTemplate.jpg"
+    text: "Set of three 10x7cm prints.",
+    image: "./photos/taxiLicenceTemplate.jpg"
   },
 ];
 
