@@ -93,12 +93,12 @@ const questionsData = [
   },
   {
     title: "china passport/visa",
-    text: "Set of China passport photos & digital image sent to your email.",
+    text: "Set of 33x48mm passport photos & digital image sent to your email.",
     image: "./photos/chinaTemplate.jpg"
   },
   {
     title: "canada passport/visa",
-    text: "Set of 5x7cm or 35x45mm prints & digital image sent to your email.",
+    text: "Set of 5x7cm or 35x45mm prints with photographer signature & digital image sent to your email.",
     image: "./photos/canadaTemplate.jpg"
   },
   {
@@ -134,6 +134,11 @@ const questionsData = [
   {
     title: "taxi PSV licence",
     text: "Set of three 10x7cm prints.",
+    image: "./photos/taxiLicenceTemplate.jpg"
+  },
+  {
+    title: "corporate profile portraits/ online resume/CV",
+    text: "Set of digital headshots for online resume or full length for airline interviews.",
     image: "./photos/taxiLicenceTemplate.jpg"
   },
 ];
@@ -176,3 +181,9 @@ questionButtons.forEach(button => {
     question.classList.toggle('show-text');
   });
 });
+
+
+
+
+
+
