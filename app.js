@@ -139,7 +139,7 @@ const questionsData = [
   {
     title: "corporate profile portraits/ online resume/CV",
     text: "Set of digital headshots for online resume or full length for airline interviews.",
-    image: "./photos/taxiLicenceTemplate.jpg"
+    image: "./photos/corporateProfileTemplate.jpg"
   },
 ];
 
