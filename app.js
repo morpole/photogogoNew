@@ -137,7 +137,7 @@ const questionsData = [
     image: "./photos/taxiLicenceTemplate.jpg"
   },
   {
-    title: "corporate profile portraits/ online resume/CV",
+    title: "corporate profile/ online resume",
     text: "Set of digital headshots for online resume or full length for airline interviews.",
     image: "./photos/corporateProfileTemplate.jpg"
   },
