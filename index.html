@@ -9,6 +9,9 @@
     
     <!-- styles -->
     <link rel="stylesheet" href="styles.css" />
+   
+    
+
   </head>
   <body>
     <header id="home">
@@ -17,11 +20,15 @@
         <div class="nav-center">
           <!-- nav header -->
           <div class="nav-header">
-            <img src="./photos/logo.svg" class="logo" alt="logo" />
+            <div class="logo-wrapper">
+                <h1 id="logo">photogogo</h1>
+                <h4 id="logoSub">travel photo specialist</h4>
+            </div>
             <button class="nav-toggle">
-              <i class="fas fa-bars"></i>
+                <i class="fas fa-bars"></i>
             </button>
-          </div>
+        </div>
+        
           <!-- links -->
           <div class="links-container">
             <ul class="links">
@@ -76,41 +83,47 @@
         </div>
     </section>
 
-
-
-    <!-- footer -->
     <footer class="section">
-      <div class="address-info">
-        <span>
+      <div class="footer-content">
+        <div class="address-info">
+          <span>
             <i class="fa-solid fa-location-dot"></i> 
             11-14<br>
-            upper abbey st<br>
+            Upper Abbey St<br>
             D01 V0C1
-        </span>
-    </div>
-      <div class="contact-info">
-        <i class="fa-solid fa-phone"></i>
-        <a href="tel:018148957" style="color: white;">018148957</a>
+          </span>
+        </div>
+        <div class="opening-times">
+          <span>
+            <i class="fa-regular fa-clock"></i>
+            <a href="https://maps.app.goo.gl/iSEDZjVh7CpH36rT9" target="_blank" rel="noopener noreferrer" style="color: white;"> Opening hours on Google Maps</a>
+          </span>
+        </div>
+        <div class="phone-info">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:018148957" style="color: white;"> 018148957</a>
+        </div>
+        <p>Contact us:</p>
+        <div class="icon-container">
+          <a href="https://www.facebook.com/photogogodublin" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://maps.app.goo.gl/u7b69cv7gNVMVJsc8" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="mailto:photos@photogogo.ie">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+        <p>
+          Copyright &copy; photogogo <span id="date"></span>. Website design by morpole
+          <a href="https://www.github.com/morpole" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+          </a>
+        </p>
       </div>
-      <p>contact us: </p>
-      <div class="icon-container">
-        <a href="https://www.facebook.com/photogogodublin" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://maps.app.goo.gl/u7b69cv7gNVMVJsc8" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="mailto://photos@photogogo.ie">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
-      </div>
-      <p>
-        copyright &copy; photogogo <span id="date"></span>. website design by morpole
-        <a href="https://www.github.com/morpole" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github"></i>
-        </a>
-      </p>
     </footer>
+    
     
     <a class="scroll-link top-link" href="#home">
       <i class="fas fa-arrow-up"></i>
@@ -121,6 +134,6 @@
 </html>
 
 
-<!-- add link to google maps with opening hrs -->
+
 <!-- add google reviews  -->
-<!-- screenshots for github -->
+

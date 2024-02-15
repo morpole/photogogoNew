@@ -237,9 +237,31 @@ nav {
 .nav-toggle:hover {
   color: var(--clr-white);
 }
-.logo {
-  height: 50px;
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
 }
+
+#logo {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+}
+
+#logoSub{
+  font-size: .9rem;
+  color: white;
+  margin: 0;
+} 
+
+@media screen and (min-width: 800px) {
+  #logoSub {
+      margin-top: 0.5rem;
+  }
+}
+
 .links-container {
   height: 0;
   overflow: hidden;
@@ -336,19 +358,19 @@ header {
 .title h2 h3 {
   color: var(--clr--white);
   text-align: center;
-  text-transform: capitalize;
+  text-transform: capitalize
 }
 .title span {
   color: var(--clr-secondary);
 }
 
 #about {
- height: 100vh;
+ height: auto;
   background: url(./photos/map.jpg) center/cover no-repeat;
 
 }
 #about .title {
-  height: 100vh;
+  height: auto;
   background-size: cover;
   background-position: center;
   color: var(--clr-white); 
@@ -474,20 +496,55 @@ display: block; /* Separate span to a new line */
 
 
 /* Footer styling */
+
+
 footer {
   background: var(--clr-bground2);
   padding: 5rem;
-  padding-top: 1rem;
+  color: white;
 }
 
-.address-info {
-color: white; 
-display: flex;
-align-items: center;
-justify-content: center;
-text-transform: capitalize;
-font-size: 1.2rem;
-font-weight: bold;
+
+.address-info,
+.contact-info,
+.fa-clock,
+.opening-times a, 
+.phone-info i,
+.phone-info a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+.fa-clock{
+  font-size: 1.2rem;
+}
+
+.opening-times {
+  text-align: center;
+}
+
+.opening-times span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opening-times a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+@media screen and (max-width: 600px) {
+  .opening-times a {
+    white-space: normal; /* Allow line breaks */
+    text-align: center;
+  }
 }
 
 .address-info span {
@@ -495,51 +552,29 @@ font-weight: bold;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
-.address-info p {
-  font-weight: bold;
-}
-
-.contact-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--clr--white);
-  margin-bottom: 1rem;
-}
-
-.contact-info i {
+.phone-info i,
+.phone-info a {
   font-size: 2rem;
-  margin-right: 0.5rem; 
-  color: white;/* Adjust the margin as needed */
 }
-
-.contact-info a {
-  font-size: 2rem;
-  font-weight: bold;
-  color: white; 
+.phone-info i {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
 }
-
-/* Centered icon container */
 .icon-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
 }
 
-/* Icon styling */
-footer .icon-container a i {
-  color: white;
+.icon-container a i {
   font-size: 2em;
+  color: white;
 }
 
-/* Footer text styling */
 footer p {
-  color: white;
   text-align: center;
-  text-transform: capitalize;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -549,8 +584,7 @@ footer p a {
 }
 
 
-
-.top-link {
+ .top-link {
   font-size: 1.25rem;
   position: fixed;
   bottom: 3rem;
@@ -585,5 +619,4 @@ footer p a {
 
 .top-link:hover {
   background: rgb(142, 142, 143);
-}
-
+} 
