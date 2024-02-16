@@ -383,16 +383,20 @@ header {
 }
 
 #about .title span {
-display: block; /* Separate span to a new line */
+  display: block; /* Separate span to a new line */
 }
-#about .title p {
+#about .title p,
+#about .title #quoteContainer
+{
   background-color: var(--clr-bground2);
   font-family: var(--ff-primary);
   border-radius: 8px; 
   padding: 10px; 
   box-sizing: border-box; 
+ 
 }
-
+  
+}
 /* ########questions###### */
 
 .questions h3{
