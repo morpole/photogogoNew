@@ -81,14 +81,25 @@ scrollLinks.forEach((link) => {
 
 // Array of quotes
 const quotes = [
-  {"quote": '" Graham took passport photos of my 7 week old. Id tried myself 100s of photos and failed to get the baby to look at the camera with the appropriate white backdrop. He got the baby to sit on side of my knee and for me to hold the babys head and then he photoshopped out my hand then checked the photo was acceptable on the passport page and I had the digital image in no time. Highly recommend for baby passport pics!! Graham is super nice and chatty too "', 
-   "author": 'Sinead Fynes'
+  {"quote": '" Graham took passport photos of my 7 week old. Id tried myself 100s of photos and failed to get the baby to look at the camera with the appropriate white backdrop. He got the baby to sit on side of my knee and for me to hold the babys head and then checked the photo was acceptable on the passport page and I had the digital image in no time. Highly recommend for baby passport pics!! Graham is super nice and chatty too "', 
+   "author": 'Sinéad Fynes'
   },
   {"quote": '" It was an amazing experience. I had a walk in to get my US VISA passport photo clicked. The whole process took me about 5 - 10mins where I received my hard copies and a soft copy together at the cost of €15. Hopefully, I will return to this place to get my professional pics clicked 🙂 Thank you for the great work you do👍 Cheers 🙂 … "',
    "author": 'Swapnil Gawai'
   },
   {"quote": '" Excellent service! Went in to get my passport photo taken and was very pleased with the quality of the photo. I had difficulty uploading my digital copy online but Graham was more than happy to help me until we figured it out. Couldnt say a better word about the place. Will definitely recommend to friends and family. "',
   "author": 'Hannah Shackley'
+  },
+  {"quote": '"Very fast and professional service. I needed a photo for an American Visa, they also send you the digital version. Im so satisfied by the result, considering that I usually look very bad in pictures. Highly recommend"',
+  "author": 'Veronica Caringal'
+  },
+  {
+    "quote": '"Graham was amazing! Needed to get a passport picture for our new born! Most of the shops told me they are not doing it, but Graham was superb and we got the pic on no time!!! Highly recommended and thank you again Graham!"',
+    "author": 'Florian Holzneckt'
+  },
+  {
+    "quote": '"Outstanding service. The owner was able to quickly help in adjusting our photos to meet specific requirements in"',
+    "author": 'Alessandro Ristori'
   }
 ];
 
@@ -110,7 +121,7 @@ function scrollQuotes() {
 }
 
 // Scroll quotes every 5 seconds
-setInterval(scrollQuotes, 18000);
+setInterval(scrollQuotes, 12000);
 
 
 

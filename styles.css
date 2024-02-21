@@ -358,7 +358,8 @@ header {
 .title h2 h3 {
   color: var(--clr--white);
   text-align: center;
-  text-transform: capitalize
+  text-transform: capitalize;
+  
 }
 .title span {
   color: var(--clr-secondary);
@@ -367,15 +368,19 @@ header {
 #about {
  height: auto;
   background: url(./photos/map.jpg) center/cover no-repeat;
-
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
+
 #about .title {
-  height: auto;
+  /* height: auto; */
   background-size: cover;
   background-position: center;
   color: var(--clr-white); 
   text-align: center;
   padding: 100px;
+  width: 80%;
+  margin: auto;
 }
 
 #about .title h2 {
@@ -383,17 +388,21 @@ header {
 }
 
 #about .title span {
-  display: block; /* Separate span to a new line */
+  display: block; 
+  /* Separate span to a new line */
+}
+#quoteContainer{
+  width: 90%;
+  margin: auto;
 }
 #about .title p,
-#about .title #quoteContainer
+#about .title 
 {
   background-color: var(--clr-bground2);
   font-family: var(--ff-primary);
   border-radius: 8px; 
   padding: 10px; 
   box-sizing: border-box; 
- 
 }
   
 }
