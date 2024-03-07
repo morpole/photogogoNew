@@ -1,4 +1,4 @@
-/* globalstyles */
+/* **globalstyles** */
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
@@ -81,9 +81,24 @@ h4 {
   }
 }
 
-/* statOfHeader */
 
-/* logo */
+/* **navbar** */
+nav {
+  background: var(--clr-bground2);
+  padding: 1rem 1.5rem;
+  z-index: 1000;
+  border-bottom: 0.5rem solid var(--clr-green-light);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 #logo,
 #logoSub {
@@ -103,28 +118,12 @@ h4 {
   }
 }
 
-/* ***navbar*** */
-
-nav {
-  background: var(--clr-bground2);
-  padding: 1rem 1.5rem;
-  z-index: 1000;
-  border-bottom: 0.5rem solid var(--clr-green-light);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-nav .links a:hover {
-  color: var(--clr-secondary);
-}
-
 .nav-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .nav-toggle {
   font-size: 1.5rem;
   color: white;
@@ -132,43 +131,27 @@ nav .links a:hover {
   border-color: transparent;
   cursor: pointer;
 }
-.nav-toggle:hover {
-  color: var(--clr-white);
+
+nav .links a:hover {
+  color: var(--clr-secondary);
 }
 
-.logo-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
 
 .links-container {
-  height: 0;
-  overflow: hidden;
-  transition: var(--transition);
+  overflow: hidden; /* hidesdots */
 }
-.show-links {
-  height: 200px;
-}
+
 .links a {
-  background: rgb(0, 77, 68);
   color: white;
   font-size: 1.1rem;
   text-transform: capitalize;
-  letter-spacing: var(--spacing);
-  display: block;
-  list-style-type: none;
-  transition: var(--transition);
+  display: block; 
   font-weight: bold;
   padding: 0.75rem 0;
-  list-style-type: none;
-  /* todo: remove dots on links */
 }
 
 @media screen and (min-width: 800px) {
-  .nav {
-    background: transparent;
-  }
+
   .nav-center {
     width: 90vw;
     max-width: 1170px;
@@ -176,9 +159,6 @@ nav .links a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  .nav-header {
-    padding: 0;
   }
   .nav-toggle {
     display: none;
@@ -188,25 +168,17 @@ nav .links a:hover {
   }
   .links {
     display: flex;
+    list-style-type: none; 
+    padding: 0; 
   }
   .links a {
-    background: transparent;
-    color: var(--clr-white);
-    font-size: 1.1rem;
-    text-transform: capitalize;
-    display: block;
-    transition: var(--transition);
     margin: 0 1rem;
-    font-weight: bold;
-    padding: 0;
   }
-  .links a:hover {
-    color: var(--clr-white);
-  }
+
 }
+/* **endNavbar** */
 
-/* home */
-
+/* ###Home### */
 .banner {
   background: url(./photos/banner.jpg) center/cover no-repeat;
   min-height: 100vh;
@@ -245,10 +217,9 @@ nav .links a:hover {
   background: var(--clr-white);
   color: var(--clr-black);
 }
-/* endOfHeader */
 
-/* about */
 
+/* ###About### */
 #about {
   height: auto;
   background: url(./photos/map.jpg) center/cover no-repeat;
@@ -272,86 +243,69 @@ nav .links a:hover {
   text-transform: none;
 }
 
-/* continue edit below this line */
 
-/* ########questions###### */
+/* ###Services### */
 
-.questions h3 {
-  color: var(--clr--white);
-  font-family: "Courier New", Courier, monospace;
-}
-
-.question {
-  /* background: var(--clr-white); */
-  box-shadow: var(--light-shadow);
+.service {
   padding: 1.5rem 1.5rem 0 1.5rem;
   border-bottom: 1px solid var(--clr-bground2);
-  background-color: var(--clr--white);
 }
 
-.question-title {
+.service-title {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-bottom: 1rem;
-  color: var(--clr--white);
 }
-.question-title p {
+
+.service-title p {
   margin-bottom: 0;
   color: var(--clr-grey-2);
-  font-family: var(--ff-primary);
   font-weight: bold;
   font-size: 1.2rem;
-  /* font-style: italic; */
   transform: skewX(-5deg);
-  text-transform: capitalize;
 }
-.question-btn {
+
+.service-btn {
   font-size: 1.5rem;
   background: transparent;
   border-color: transparent;
   cursor: pointer;
   color: var(--clr-grey-2);
 }
-.question-btn:hover {
-  transform: rotate(90deg);
-}
-.question-text {
+
+.service-text {
   padding: 1rem 0 1.5rem 0;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  font-family: var(--ff-primary);
 }
-.question-text p {
+.service-text p {
   color: var(--clr-grey-2);
   font-weight: bold;
-  margin-bottom: 0;
 }
-/*hide text*/
-.question-text {
+
+.service-text {
   display: none;
 }
-.show-text .question-text {
+
+.show-text .service-text {
   display: block;
 }
+
 .minus-icon {
   display: none;
-}
+} 
+
 .show-text .minus-icon {
   display: inline;
 }
+
 .show-text .plus-icon {
   display: none;
 }
 
-/* contact&footer */
-
+/* ###Contact### */
 .map-container {
-  /* margin-top: 1rem; */
-  margin-bottom: 1rem;
   position: relative;
-  overflow: hidden;
   padding-top: 56.25%;
-  background: var(--clr-bground2);
   border-bottom: 0.5rem solid var(--clr-green-light);
 }
 
@@ -363,21 +317,22 @@ nav .links a:hover {
   height: 100%;
 }
 
-/* Footer styling */
-
-#contact {
-  text-align: left;
-  color: aliceblue;
-  background: var(--clr-bground2);
-  padding-bottom: 1rem;
-}
-
 footer {
   background: var(--clr-bground2);
   padding: 5rem;
-  color: white;
+  /* color: white; */
 }
 
+footer p {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* continue edit below this line */
+footer p a {
+  color: white;
+}
 .address-info,
 .contact-info,
 .fa-clock,
@@ -390,8 +345,12 @@ footer {
   text-transform: capitalize;
   font-size: 1.2rem;
   font-weight: bold;
+  color:greenyellow;
 }
 
+.footer-content .address-info p {
+  color: greenyellow;
+}
 .opening-times span {
   display: flex;
   flex-direction: column;
@@ -437,15 +396,6 @@ footer {
   color: white;
 }
 
-footer p {
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-footer p a {
-  color: white;
-}
 
 .top-link {
   font-size: 1.25rem;

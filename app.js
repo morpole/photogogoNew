@@ -11,7 +11,7 @@ const linksContainer = document.querySelector(".links-container");
 const links = document.querySelector(".links");
 
 navToggle.addEventListener("click", function () {
-  // linksContainer.classList.toggle("show-links");
+  
 
   const linksHeight = links.getBoundingClientRect().height;
   const containerHeight = linksContainer.getBoundingClientRect().height;
@@ -20,7 +20,7 @@ navToggle.addEventListener("click", function () {
   } else {
     linksContainer.style.height = 0;
   }
-  // console.log(linksContainer.getBoundingClientRect());
+  
 });
 
 // ********** fixed navbar ************
@@ -125,8 +125,8 @@ setInterval(scrollQuotes, 12000);
 
 
 
-// Define an array of question objects
-const questionsData = [
+// Define an array of service objects
+const servicesData = [
   {
     title: "EU/irish passport/visa",
     text: "Set of 6 35x45mm prints and pre-checked digital image sent to your email.",
@@ -189,16 +189,16 @@ const questionsData = [
   },
 ];
 
-// Get the questions container
-const questionsContainer = document.querySelector('.questions');
+// Get the services container
+const servicesContainer = document.querySelector('.services');
 
-// Dynamically generate HTML for questions
-questionsData.forEach(question => {
-  const questionHTML = `
-    <article class="question">
-      <div class="question-title">
-        <p>${question.title}</p>
-        <button type="button" class="question-btn">
+// Dynamically generate HTML for services
+servicesData.forEach(service => {
+  const serviceHTML = `
+    <article class="service">
+      <div class="service-title">
+        <p>${service.title}</p>
+        <button type="button" class="service-btn">
           <span class="plus-icon">
             <i class="far fa-plus-square"></i>
           </span>
@@ -207,24 +207,24 @@ questionsData.forEach(question => {
           </span>
         </button>
       </div>
-      <div class="question-text">
-        <p>${question.text}</p>
-        <img src="${question.image}" alt="${question.title}" width="100%" height="100%">
+      <div class="service-text">
+        <p>${service.text}</p>
+        <img src="${service.image}" alt="${service.title}" width="100%" height="100%">
       </div>
     </article>
   `;
 
-  // Append the question HTML to the questions container
-  questionsContainer.innerHTML += questionHTML;
+  // Append the service HTML to the services container
+  servicesContainer.innerHTML += serviceHTML;
 });
 
 // Attach event listeners to the dynamically generated buttons
-const questionButtons = document.querySelectorAll('.question-btn');
+const serviceButtons = document.querySelectorAll('.service-btn');
 
-questionButtons.forEach(button => {
+serviceButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const question = button.closest('.question');
-    question.classList.toggle('show-text');
+    const service = button.closest('.service');
+    service.classList.toggle('show-text');
   });
 });
 
