@@ -1,7 +1,6 @@
+/* globalstyles */
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
-
-
 
 :root {
   --clr-white: #fff;
@@ -9,7 +8,7 @@
   --clr-grey-5: hsl(210, 22%, 49%);
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-bground: rgba(107, 175, 80, 0.7);
-  --clr-bground1:hsl(90, 55%, 72%);
+  --clr-bground1: hsl(90, 55%, 72%);
   --clr-bground2: rgb(0, 77, 68);
   --clr-secondary: rgb(142, 142, 143);
   --clr-black: #222;
@@ -18,11 +17,11 @@
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-*{ 
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
+}
 
 body {
   font-family: var(--ff-primary);
@@ -34,7 +33,6 @@ a {
   text-decoration: none;
 }
 
-
 h1,
 h2,
 h3,
@@ -44,7 +42,7 @@ p {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: var(--ff-primary)
+  font-family: var(--ff-primary);
 }
 h1 {
   font-size: 3rem;
@@ -81,8 +79,9 @@ h4 {
   h4 {
     line-height: 1;
   }
-  
 }
+
+/* statOfHeader */
 
 /* logo */
 
@@ -94,13 +93,13 @@ h4 {
   margin: 0;
 }
 
-#logoSub{
-  font-size: .9rem;
-} 
+#logoSub {
+  font-size: 0.9rem;
+}
 
 @media screen and (min-width: 800px) {
   #logoSub {
-      margin-top: 0.5rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -110,26 +109,18 @@ nav {
   background: var(--clr-bground2);
   padding: 1rem 1.5rem;
   z-index: 1000;
-  border-bottom: .5rem solid var(--clr-green-light);
-}
-/* fixed nav */
-.fixed-nav {
+  border-bottom: 0.5rem solid var(--clr-green-light);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: rgb(0, 77, 68);
-  box-shadow: var(--light-shadow);
 }
-.fixed-nav .links a {
-  color: white;
-}
-.fixed-nav .links a:hover {
+
+nav .links a:hover {
   color: var(--clr-secondary);
 }
 
 .nav-header {
-  background-color: rgb(0, 77, 68);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -139,7 +130,6 @@ nav {
   color: white;
   background: transparent;
   border-color: transparent;
-  transition: var(--transition);
   cursor: pointer;
 }
 .nav-toggle:hover {
@@ -149,9 +139,8 @@ nav {
 .logo-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
-
 
 .links-container {
   height: 0;
@@ -168,13 +157,14 @@ nav {
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   display: block;
+  list-style-type: none;
   transition: var(--transition);
   font-weight: bold;
   padding: 0.75rem 0;
+  list-style-type: none;
+  /* todo: remove dots on links */
 }
-.links a:hover {
-  color: var(--clr-white);
-}
+
 @media screen and (min-width: 800px) {
   .nav {
     background: transparent;
@@ -188,7 +178,6 @@ nav {
     justify-content: space-between;
   }
   .nav-header {
-    
     padding: 0;
   }
   .nav-toggle {
@@ -256,6 +245,7 @@ nav {
   background: var(--clr-white);
   color: var(--clr-black);
 }
+/* endOfHeader */
 
 /* about */
 
@@ -266,16 +256,16 @@ nav {
   padding-bottom: 1rem;
 }
 
-.quotes{
+.quotes {
   background-color: var(--clr-bground2);
-  border-radius: 3%; 
+  border-radius: 3%;
   padding: 10px;
   width: 80%;
   margin: auto;
 }
 
 .quotes p {
-  color: var(--clr-white); 
+  color: var(--clr-white);
   font-family: var(--ff-primary);
   font-weight: bold;
   text-align: center;
@@ -286,11 +276,10 @@ nav {
 
 /* ########questions###### */
 
-.questions h3{
+.questions h3 {
   color: var(--clr--white);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
-
 
 .question {
   /* background: var(--clr-white); */
@@ -352,14 +341,13 @@ nav {
 }
 .show-text .plus-icon {
   display: none;
-} 
+}
 
 /* contact&footer */
 
-
 .map-container {
   /* margin-top: 1rem; */
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
   position: relative;
   overflow: hidden;
   padding-top: 56.25%;
@@ -390,11 +378,10 @@ footer {
   color: white;
 }
 
-
 .address-info,
 .contact-info,
 .fa-clock,
-.opening-times a, 
+.opening-times a,
 .phone-info i,
 .phone-info a {
   display: flex;
@@ -404,8 +391,6 @@ footer {
   font-size: 1.2rem;
   font-weight: bold;
 }
-
-
 
 .opening-times span {
   display: flex;
@@ -424,7 +409,7 @@ footer {
     white-space: normal; /* Allow line breaks */
     text-align: center;
   }
-} 
+}
 
 .address-info span {
   display: flex;
@@ -462,8 +447,7 @@ footer p a {
   color: white;
 }
 
-
- .top-link {
+.top-link {
   font-size: 1.25rem;
   position: fixed;
   bottom: 3rem;
@@ -498,4 +482,4 @@ footer p a {
 
 .top-link:hover {
   background: rgb(142, 142, 143);
-}  
+}
