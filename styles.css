@@ -7,7 +7,7 @@
   --clr-grey-2: hsl(211, 39%, 23%);
   --clr-grey-5: hsl(210, 22%, 49%);
   --clr-green-light: hsl(125, 71%, 66%);
-  --clr-bground: rgba(107, 175, 80, 0.7);
+  --clr-bground: rgba(219, 253, 206, 0.7);
   --clr-bground1: hsl(90, 55%, 72%);
   --clr-bground2: rgb(0, 77, 68);
   --clr-secondary: rgb(142, 142, 143);
@@ -15,9 +15,16 @@
   --ff-primary: "Roboto", sans-serif;
   --radius: 0.2rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s linear;
 }
 
-* {
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -126,9 +133,10 @@ nav {
 
 .nav-toggle {
   font-size: 1.5rem;
-  color: white;
+  color: var(--clr-white);
   background: transparent;
   border-color: transparent;
+  transition: var(--transition);
   cursor: pointer;
 }
 
@@ -138,14 +146,17 @@ nav .links a:hover {
 
 
 .links-container {
-  overflow: hidden; /* hidesdots */
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
 }
 
 .links a {
-  color: white;
+  color: var(--clr-white);
   font-size: 1.1rem;
   text-transform: capitalize;
   display: block; 
+  transition: var(--transition);
   font-weight: bold;
   padding: 0.75rem 0;
 }
@@ -189,12 +200,14 @@ nav .links a:hover {
 .container h1 {
   color: var(--clr-white);
   text-transform: capitalize;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .container p {
-  background-color: var(--clr-bground);
   max-width: 25rem;
   margin: 0 auto;
   margin-bottom: 1.25rem;
+  color: var(--clr-white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 @media screen and (min-width: 768px) {
   .container p {
@@ -202,16 +215,13 @@ nav .links a:hover {
   }
 }
 
-#tagline {
-  color: var(--clr-white);
-}
-
 .btn-white {
   background: transparent;
   border: 2px solid var(--clr-black);
-  color: var(--clr-white);
+  color: var(--clr-grey-2);
   border-color: var(--clr-white);
   padding: 0.5rem 1rem;
+  text-transform: uppercase;
 }
 .btn-white:hover {
   background: var(--clr-white);
@@ -303,6 +313,10 @@ nav .links a:hover {
 }
 
 /* ###Contact### */
+#contact {
+  padding-bottom: 1rem;
+}
+
 .map-container {
   position: relative;
   padding-top: 56.25%;
@@ -317,83 +331,54 @@ nav .links a:hover {
   height: 100%;
 }
 
+
 footer {
   background: var(--clr-bground2);
   padding: 5rem;
-  /* color: white; */
-}
 
-footer p {
+}
+.footer-content {
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-/* continue edit below this line */
-footer p a {
-  color: white;
-}
-.address-info,
-.contact-info,
-.fa-clock,
-.opening-times a,
-.phone-info i,
-.phone-info a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: capitalize;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
-  color:greenyellow;
 }
 
-.footer-content .address-info p {
-  color: greenyellow;
-}
-.opening-times span {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.opening-times a {
-  font-size: 1.2rem;
-  font-weight: bold;
-  white-space: nowrap; /* Prevent line breaks */
-}
-
-@media screen and (max-width: 600px) {
-  .opening-times a {
-    white-space: normal; /* Allow line breaks */
-    text-align: center;
+@media screen and (min-width: 800px) {
+  .footer-content {
+    font-size: 1.25rem;
   }
 }
 
-.address-info span {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 2rem;
+.footer-content .opening-times  {
+  padding-top: 2rem;
 }
-
-.phone-info i,
-.phone-info a {
+.footer-content .opening-times a:hover{
+  color:var(--clr-white);
+}
+.footer-content .phone-info p {
+  margin-top:  1rem;
+  margin-bottom: 0rem;
+}
+.footer-content .icon-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   font-size: 2rem;
 }
-.phone-info i {
-  margin-top: 1.5rem;
-  font-size: 1.2rem;
-}
-.icon-container {
-  display: flex;
-  justify-content: space-between;
+.footer-content .icon-container a,
+.footer-content .opening-times a,
+.footer-content .phone-info a, 
+.footer-content  p a,
+.footer-content {
+  color: var(--clr-bground);
 }
 
-.icon-container a i {
-  font-size: 2em;
-  color: white;
+.footer-content .icon-container a:hover {
+  color: var(--clr-white);
+}
+.footer-content p a i:hover {
+  color: var(--clr-white);
 }
 
 
@@ -402,7 +387,7 @@ footer p a {
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background: var(--clr-grey-5);
+  background: var(--clr-green-light);
   width: 2rem;
   height: 2rem;
   display: grid;
