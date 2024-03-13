@@ -113,6 +113,7 @@ let index = 0;
 quoteText.textContent = quotes[index].quote;
 authorText.textContent = "- " + quotes[index].author;
 
+
 // Function to scroll quotes
 function scrollQuotes() {
   index = (index + 1) % quotes.length; // Increment index and loop

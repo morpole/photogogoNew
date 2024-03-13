@@ -190,6 +190,10 @@ nav .links a:hover {
 /* **endNavbar** */
 
 /* ###Home### */
+
+#home{
+  margin-top: 2rem;
+}
 .banner {
   background: url(./photos/banner.jpg) center/cover no-repeat;
   min-height: 100vh;
@@ -418,3 +422,5 @@ footer {
 .top-link:hover {
   background: rgb(142, 142, 143);
 }
+
+
