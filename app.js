@@ -98,7 +98,7 @@ const quotes = [
     "author": 'Florian Holzneckt'
   },
   {
-    "quote": '"Outstanding service. The owner was able to quickly help in adjusting our photos to meet specific requirements in"',
+    "quote": '"Outstanding service. The owner was able to quickly help in adjusting our photos to meet specific requirements in a very short period of time. Quality was great and overall care for the customer unique!! Definitely recommended."',
     "author": 'Alessandro Ristori'
   }
 ];

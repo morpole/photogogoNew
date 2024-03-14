@@ -192,7 +192,7 @@ nav .links a:hover {
 /* ###Home### */
 
 #home{
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 .banner {
   background: url(./photos/banner.jpg) center/cover no-repeat;
@@ -222,7 +222,7 @@ nav .links a:hover {
 .btn-white {
   background: transparent;
   border: 2px solid var(--clr-black);
-  color: var(--clr-grey-2);
+  color: var(--clr-white);
   border-color: var(--clr-white);
   padding: 0.5rem 1rem;
   text-transform: uppercase;
@@ -317,9 +317,6 @@ nav .links a:hover {
 }
 
 /* ###Contact### */
-#contact {
-  padding-bottom: 1rem;
-}
 
 .map-container {
   position: relative;
