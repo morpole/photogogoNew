@@ -77,15 +77,12 @@ scrollLinks.forEach((link) => {
   });
 });
 
-
-
-// Array of quotes
 const quotes = [
   {"quote": '" Graham took passport photos of my 7 week old. Id tried myself 100s of photos and failed to get the baby to look at the camera with the appropriate white backdrop. He got the baby to sit on side of my knee and for me to hold the babys head and then checked the photo was acceptable on the passport page and I had the digital image in no time. Highly recommend for baby passport pics!! Graham is super nice and chatty too "', 
-   "author": 'Sinéad Fynes'
+  "author": 'Sinéad Fynes',
   },
   {"quote": '" It was an amazing experience. I had a walk in to get my US VISA passport photo clicked. The whole process took me about 5 - 10mins where I received my hard copies and a soft copy together at the cost of €15. Hopefully, I will return to this place to get my professional pics clicked 🙂 Thank you for the great work you do👍 Cheers 🙂 … "',
-   "author": 'Swapnil Gawai'
+  "author": 'Swapnil Gawai'
   },
   {"quote": '" Excellent service! Went in to get my passport photo taken and was very pleased with the quality of the photo. I had difficulty uploading my digital copy online but Graham was more than happy to help me until we figured it out. Couldnt say a better word about the place. Will definitely recommend to friends and family. "',
   "author": 'Hannah Shackley'
@@ -103,26 +100,68 @@ const quotes = [
   }
 ];
 
-// Get quote container and text element
-const quoteContainer = document.getElementById("quoteContainer");
-const quoteText = document.getElementById("quoteText");
-const authorText = document.getElementById("authorText");
+const carouselInner = document.querySelector('.carousel-inner');
+const carouselIndicators = document.querySelector('.carousel-indicators');
 
-// Initialize index and display first quote
-let index = 0;
-quoteText.textContent = quotes[index].quote;
-authorText.textContent = "- " + quotes[index].author;
+// Populate carousel with quotes
+quotes.forEach((quote, index) => {
+  const quoteElement = document.createElement('div');
+  quoteElement.classList.add('quote-content');
 
+  const quoteContent = `
+    <p>${quote.quote}</p>
+    <p>${quote.author}</p>
 
-// Function to scroll quotes
-function scrollQuotes() {
-  index = (index + 1) % quotes.length; // Increment index and loop
-  quoteText.textContent = quotes[index].quote;
-  authorText.textContent = "- " + quotes[index].author;
+  `;
+
+  quoteElement.innerHTML = quoteContent;
+  carouselInner.appendChild(quoteElement);
+
+  // Create indicator buttons
+  const indicator = document.createElement('span');
+  indicator.classList.add('carousel-indicator');
+  indicator.setAttribute('onclick', `goToSlide(${index})`);
+  carouselIndicators.appendChild(indicator);
+});
+
+// JavaScript for carousel functionality
+let slideIndex = 0;
+const slides = document.querySelectorAll('.quote-content');
+const indicators = document.querySelectorAll('.carousel-indicator');
+
+function showSlide(n) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  indicators.forEach(indicator => indicator.classList.remove('active'));
+  slides[n].classList.add('active');
+  indicators[n].classList.add('active');
 }
 
-// Scroll quotes every 5 seconds
-setInterval(scrollQuotes, 12000);
+function nextSlide() {
+  slideIndex++;
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  }
+  showSlide(slideIndex);
+}
+
+function prevSlide() {
+  slideIndex--;
+  if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
+  }
+  showSlide(slideIndex);
+}
+
+function goToSlide(n) {
+  slideIndex = n;
+  showSlide(slideIndex);
+}
+
+// Initially show the first slide
+showSlide(slideIndex);
+
+// Automatically cycle through quotes every 5 seconds
+setInterval(nextSlide, 5000);
 
 
 

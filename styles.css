@@ -3,18 +3,18 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
 :root {
-  --clr-white: #fff;
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-green-light: hsl(125, 71%, 66%);
-  --clr-bground: rgba(219, 253, 206, 0.7);
-  --clr-bground1: hsl(90, 55%, 72%);
+  --clr-white: rgb(255, 255, 255);
+  --clr-grey-2: rgb(36, 58, 82);
+  --clr-grey-5: rgb(97, 125, 152);
+  --clr-green-light: rgb(107, 230, 117);
+  --clr-bground: rgba(0, 77, 68, 0.7);
+  --clr-bground1:	rgb(184, 223, 144);
   --clr-bground2: rgb(0, 77, 68);
   --clr-secondary: rgb(142, 142, 143);
-  --clr-black: #222;
+  --clr-black: 	rgb(34, 34, 34);
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --ff-primary: "Roboto", sans-serif;
   --radius: 0.2rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s linear;
 }
 
@@ -241,20 +241,91 @@ nav .links a:hover {
   padding-bottom: 1rem;
 }
 
+.carousel-inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45vh;
+}
+
+@media screen and (min-width: 800px) {
+  .carousel-inner {
+    height: 25vh;
+  }
+}
+
+
 .quotes {
-  background-color: var(--clr-bground2);
-  border-radius: 3%;
-  padding: 10px;
-  width: 80%;
-  margin: auto;
+    background-color: var(--clr-bground);
+    border-radius: 1rem;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.quote-content {
+    height: auto; /* Fixed height for each quote */
+    overflow: hidden; 
+    display: none; /* Initially hide all quotes */
+}
+
+.quote-content.active {
+    display: block; /* Display active quote */
 }
 
 .quotes p {
-  color: var(--clr-white);
-  font-family: var(--ff-primary);
-  font-weight: bold;
-  text-align: center;
-  text-transform: none;
+    color: var(--clr-white);
+    font-family: var(--ff-primary);
+    font-weight: bold;
+    text-align: center;
+    text-transform: none;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    line-height: 1.5; 
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 30%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-control.prev {
+    left: 0;
+}
+
+.carousel-control.next {
+    right: 0;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(177, 175, 175);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicator.active {
+    background-color: #ffffff;
 }
 
 
@@ -372,7 +443,7 @@ footer {
 .footer-content .phone-info a, 
 .footer-content  p a,
 .footer-content {
-  color: var(--clr-bground);
+  color: var(--clr-bground1);
 }
 
 .footer-content .icon-container a:hover {
